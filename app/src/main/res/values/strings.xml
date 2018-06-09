@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Rubber Calculator</string>
+
+    <string-array name="rubberType">
+        <item>577</item>
+        <item>834</item>
+        <item>553</item>
+        <item>906</item>
+        <item>920</item>
+        <item>922</item>
+        <item>886</item>
+    </string-array>
+</resources>
