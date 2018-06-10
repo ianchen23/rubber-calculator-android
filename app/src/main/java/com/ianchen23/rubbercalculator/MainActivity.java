@@ -14,12 +14,13 @@ import java.util.HashMap;
 
 public class MainActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
+    final HashMap<String, Double> densityList = new HashMap<>();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        final HashMap<String, Double> densityList = new HashMap<>();
         densityList.put("577", 0.0451);
         densityList.put("834", 0.0452);
         densityList.put("553", 0.0453);
@@ -64,15 +65,6 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
     @Override
     public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-        final HashMap<String, Double> densityList = new HashMap<>();
-        densityList.put("577", 0.0451);
-        densityList.put("834", 0.0452);
-        densityList.put("553", 0.0453);
-        densityList.put("906", 0.0454);
-        densityList.put("920", 0.0455);
-        densityList.put("922", 0.0456);
-        densityList.put("886", 0.0457);
-
         String rubberType = adapterView.getItemAtPosition(i).toString();
         TextView rubberDensity = findViewById(R.id.rubberDensity);
         rubberDensity.setText("Rubber Density: " + densityList.get(rubberType) + " lb/in3");
